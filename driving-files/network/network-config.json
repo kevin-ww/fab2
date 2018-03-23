@@ -17,13 +17,15 @@
             {
                 "requests": "grpc://peer0-org1:7051",
                 "events": "grpc://peer0-org1:7053",
-                "server-hostname": "peer0-org1"
+                "server-hostname": "peer0-org1",
+                "tls_cacerts": "fabric-peer/peer0-org1/tls/ca.crt"
             },
             "peer1":
             {
                 "requests": "grpc://peer1-org1:7051",
                 "events": "grpc://peer1-org1:7053",
-                "server-hostname": "peer1-org1"
+                "server-hostname": "peer1-org1",
+                "tls_cacerts": "fabric-peer/peer1-org1/tls/ca.crt"
             },
             "admin":
             {
@@ -41,13 +43,15 @@
             {
                 "requests": "grpc://peer0-org2:7051",
                 "events": "grpc://peer0-org2:7053",
-                "server-hostname": "peer0-org2"
+                "server-hostname": "peer0-org2",
+                "tls_cacerts": "fabric-peer/peer0-org2/tls/ca.crt"
             },
             "peer1":
             {
                 "requests": "grpc://peer1-org2:7051",
                 "events": "grpc://peer1-org2:7053",
-                "server-hostname": "peer1-org2"
+                "server-hostname": "peer1-org2",
+                "tls_cacerts": "fabric-peer/peer1-org2/tls/ca.crt"
             },
             "admin":
             {
