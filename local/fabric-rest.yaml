@@ -23,7 +23,7 @@ spec:
               name: fabric-vol
           env:
             - name: PORT
-              value: 4000
+              value: "4000"
             - name: ORG
               value: "org1"
             - name: CONFIG_FILE
