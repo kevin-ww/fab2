@@ -30,7 +30,7 @@
             "admin":
             {
                 "key": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore",
-                "cert": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystorecrypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
+                "cert": "crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts"
             }
         },
 
