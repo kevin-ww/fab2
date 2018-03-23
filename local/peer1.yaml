@@ -64,6 +64,10 @@ spec:
               value: "true"
             - name: CORE_PEER_TLS_ENABLED
               value: "false"
+            - name: CORE_PEER_ADDRESSAUTODETECT
+              value: "true"
+            - name: CORE_PEER_TLS_SERVERHOSTOVERRIDE
+              value: "peer1-org1"
             - name: CORE_PEER_TLS_CERT_FILE
               value: "/etc/hyperledger/fabric/tls/server.crt"
             - name: CORE_PEER_TLS_KEY_FILE
