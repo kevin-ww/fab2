@@ -73,11 +73,11 @@ metadata:
   labels:
     app: hyperledger-orderer
 spec:
-  type: NodePort
+  #type: NodePort
   ports:
     - name: "7050"
       targetPort: 7050
       port: 7050
-      nodePort: 30001
+      #nodePort: 30001
   selector:
     role: orderer

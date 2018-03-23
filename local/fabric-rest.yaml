@@ -1,0 +1,62 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hyperledger-fabric-rest
+  labels:
+    app: hyperledger
+    role: rest-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: hyperledger-fabric-rest
+      labels:
+        role: rest-server
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: rest-server
+          # imagePullPolicy: Never
+          image: maxxx1313/fabric-rest
+          volumeMounts:
+            - mountPath: /etc/hyperledger/fabric
+              name: fabric-vol
+          env:
+            - name: PORT
+              value: 4000
+            - name: ORG
+              value: "org1"
+            - name: CONFIG_FILE
+              value: "/etc/hyperledger/fabric/network-config.json"
+            # - name: WEB_DIR
+            #   value: "peer0-org1:7051"
+            # - name: MIDDLEWARE_CONFIG_FILE
+            #   value: "peer0-org1:7051"
+          ports:
+            - containerPort: 4000
+          # command:
+          #   - fabric-ca-server
+          #   - start
+          #   - -b
+          #   - admin:adminpw
+      volumes:
+        - name: fabric-vol
+          hostPath:
+            path: /data/driving-files
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: ca
+#   labels:
+#     app: hyperledger
+# spec:
+#   type: NodePort
+#   ports:
+#     - name: "ca"
+#       port: 7054
+#       targetPort: 7054
+#       nodePort: 30002
+#   selector:
+#     app: hyperledger
+#     role: ca
