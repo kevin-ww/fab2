@@ -12,18 +12,20 @@
         {
             "name": "peerORG1",
             "mspid": "Org1MSP",
-            "ca": "http://fabric-ca:7054",
+            "ca": "https://fabric-ca:7054",
             "peer0":
             {
-                "requests": "grpc://peer0-org1:7051",
-                "events": "grpc://peer0-org1:7053",
-                "server-hostname": "peer0-org1"
+                "requests": "grpcs://peer0-org1:7051",
+                "events": "grpcs://peer0-org1:7053",
+                "server-hostname": "peer0-org1",
+                "tls_cacerts": "fabric-peer/peer0-org1/tls/ca.crt"
             },
             "peer1":
             {
-                "requests": "grpc://peer1-org1:7051",
-                "events": "grpc://peer1-org1:7053",
-                "server-hostname": "peer1-org1"
+                "requests": "grpcs://peer1-org1:7051",
+                "events": "grpcs://peer1-org1:7053",
+                "server-hostname": "peer1-org1",
+                "tls_cacerts": "fabric-peer/peer1-org1/tls/ca.crt"
             },
             "admin":
             {
@@ -36,18 +38,20 @@
         {
             "name": "peerORG2",
             "mspid": "Org2MSP",
-            "ca": "http://fabric-ca:7054",
+            "ca": "https://fabric-ca:7054",
             "peer0":
             {
-                "requests": "grpc://peer0-org2:7051",
-                "events": "grpc://peer0-org2:7053",
-                "server-hostname": "peer0-org2"
+                "requests": "grpcs://peer0-org2:7051",
+                "events": "grpcs://peer0-org2:7053",
+                "server-hostname": "peer0-org2",
+                "tls_cacerts": "fabric-peer/peer0-org2/tls/ca.crt"
             },
             "peer1":
             {
-                "requests": "grpc://peer1-org2:7051",
-                "events": "grpc://peer1-org2:7053",
-                "server-hostname": "peer1-org2"
+                "requests": "grpcs://peer1-org2:7051",
+                "events": "grpcs://peer1-org2:7053",
+                "server-hostname": "peer1-org2",
+                "tls_cacerts": "fabric-peer/peer1-org2/tls/ca.crt"
             },
             "admin":
             {
